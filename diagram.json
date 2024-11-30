@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 125.4, "left": 114.6, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -111.77, "left": 102.4, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": 4, "left": -64.98, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 329.6,
+      "left": -133.6,
+      "attrs": {}
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 6, "left": 503, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 119.15,
+      "left": 412.8,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 71.15,
+      "left": 412.8,
+      "attrs": { "value": "330" }
+    },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 67.2, "left": 489, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -22.8,
+      "left": 445.4,
+      "attrs": { "color": "orange" }
+    },
+    { "type": "wokwi-gnd", "id": "gnd2", "top": 28.8, "left": 441, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd3", "top": 96, "left": 85.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "ldr1:AO", "uno:A0", "violet", [ "v-0.7", "h284.2" ] ],
+    [ "uno:13", "r1:1", "red", [ "v-28.8", "h173.2" ] ],
+    [ "r1:2", "led1:A", "red", [ "v0", "h37.2" ] ],
+    [ "led1:C", "gnd1:GND", "blue", [ "v0" ] ],
+    [ "r2:2", "led2:A", "orange", [ "v0", "h8.4", "v-38.4" ] ],
+    [ "uno:6", "r2:1", "orange", [ "v0" ] ],
+    [ "gnd2:GND", "led2:C", "blue", [ "v0" ] ],
+    [ "lcd1:RS", "uno:12", "green", [ "v76.8", "h86.2" ] ],
+    [ "lcd1:E", "uno:11", "green", [ "v67.2", "h76.8", "v48" ] ],
+    [ "lcd1:D4", "uno:5", "green", [ "v48", "h92.2" ] ],
+    [ "lcd1:D5", "uno:4", "green", [ "v38.4", "h92.2" ] ],
+    [ "lcd1:D6", "uno:3", "green", [ "v28.8", "h86.6" ] ],
+    [ "lcd1:D7", "uno:2", "green", [ "v19.2", "h0.3" ] ],
+    [ "lcd1:RW", "gnd3:GND", "blue", [ "v67.2", "h-76.9" ] ],
+    [ "lcd1:VSS", "gnd3:GND", "blue", [ "v67.2", "h0" ] ],
+    [ "pir1:OUT", "uno:A1", "green", [ "v172.8", "h95.86", "v124.8", "h259.2" ] ]
+  ],
+  "dependencies": {}
+}
