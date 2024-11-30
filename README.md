@@ -8,3 +8,6 @@ https://www.arduinoindonesia.id/2024/05/proyek-diy-membuat-sensor-cahaya-sederha
 # Simulasi
 
 https://wokwi.com/projects/415868067981641729
+
+![alt text](https://github.com/anghilmi/udemy-arduino/blob/main/udemy-arduino.png?raw=true)
+
